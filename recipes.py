@@ -1,21 +1,23 @@
-def cooking():
-    # Do stuff
-    return "Taking you to cooking . . .\n"
 
 
 def alchemy():
     # Do stuff
-    return "Taking you to alchemy . . .\n"
-
-
-def weapons():
-    # Do stuff
-    return "Taking you to weapons . . .\n"
+    print("Taking you to alchemy . . .\n")
 
 
 def armor():
     # Do stuff
-    return "Taking you to armor . . .\n"
+    print("Taking you to armor . . .\n")
+
+
+def cooking():
+    # Do stuff
+    print("Taking you to cooking . . .\n")
+
+
+def weapons():
+    # Do stuff
+    print("Taking you to weapons . . .\n")
 
 
 def recipe_list(argument):
@@ -26,7 +28,6 @@ def recipe_list(argument):
         "armor": armor,
     }
 
-    # Get the function from switcher dictionary
+    # Get the function from switcher dictionary and execute
     func = switcher.get(argument.lower(), lambda: "Invalid selection.\n")
-    # Execute the function
     return func()
